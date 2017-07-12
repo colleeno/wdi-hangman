@@ -31,9 +31,8 @@ alph.on('click', addToList)
 alph.on('click', checkPick)
 alph.on('click', showMan)
 alph.on('click', display)
-alph.on('click', resetDivs)
 
-function alphHover () { $(this).css('opacity', '0.5') }
+function alphHover () { $(this).css('opacity', '0.4') }
 function alphSelect () { alphPick = $(this).attr('id') }
 function addToList () { alphList.push(alphPick) }
 
@@ -46,6 +45,23 @@ function checkPick () {
     console.log(false)
     wrongPicks.push(alphPick)
   }
+}
+
+var displayArray
+
+function display () {
+  displayArray = wordArray.map((letter) => {
+  if (alphList.includes(letter)) {
+    return letter
+  } else if (letter === ' ') {
+    return ' '
+  } else {
+    return '_'
+    }
+  })
+  console.log(displayArray)
+  var displayWord = displayArray.join('')
+  $('.word').text(displayWord)
 }
 
 function showMan () {
@@ -67,34 +83,5 @@ function showMan () {
   else if (wrongPicks.length === 6) {
     $('.right-leg').removeClass('hidden')
     // show answer - or make click to see?
-  }
-}
-
-var displayArray
-
-function display () {
-  displayArray = wordArray.map((letter) => {
-  if (alphList.includes(letter)) {
-    return letter
-  } else if (alphList.includes(' ')) {
-    return ' '
-  } else {
-    return '_'
-    }
-  })
-  console.log(displayArray)
-}
-
-function resetDivs () {
-  displayArray.forEach(redoDivs)
-  console.log('divs reset')
-}
-
-function redoDivs (displayArray) {
-  for (let i = 0; i < displayArray.length; i++) {
-      if (displayArray[i] === '_') {
-        $('<div>_</div>').attr('class', 'space').appendTo('.word')
-      }
-      else $('<div> </div>').attr('class', 'letter').text(displayArray[i]).appendTo('.word')
   }
 }
