@@ -49,7 +49,7 @@ main {
 
 .main-left {
   float: left;
-  padding: 50px 0px 50px 20px;
+  padding: 50px 0px 25px 20px;
 }
 
 .stand-top {
@@ -91,19 +91,24 @@ main {
 .man > div {
   /*position: absolute;*/
 }
-.torso {
-  width: 3px;
-  height: 120px;
-  background: white;
-  margin: 0 auto;
+
+.hidden {
+  display: none;
 }
 
 .head {
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   border: 3px solid #ffffff;
   left: 50%;
+  margin: 0 auto;
+}
+
+.torso {
+  width: 3px;
+  height: 100px;
+  background: white;
   margin: 0 auto;
 }
 
@@ -118,7 +123,7 @@ main {
   transform-origin: bottom;
   position: absolute;
   left: 49%;
-  top: 23%;
+  top: 18%;
 }
 
 .right-arm {
@@ -127,7 +132,7 @@ main {
   background: white;
   position: absolute;
   right: 49%;
-  top: 23%;
+  top: 18%;
 }
 
 .leg {
@@ -141,7 +146,7 @@ main {
   transform-origin: bottom;
   position: absolute;
   left: 49%;
-  top: 37%;
+  top: 30%;
 }
 
 .right-leg {
@@ -150,13 +155,13 @@ main {
   background: white;
   position: absolute;
   right: 49%;
-  top: 37%;
+  top: 30%;
 }
 
 .main-right {
   float: right;
   width: 50%;
-  padding: 50px 20px 50px 0px;
+  padding: 50px 20px 25px 0px;
 }
 
 .alph-wrapper {
@@ -179,13 +184,9 @@ main {
   opacity: 0.5;
 }
 
-.letter {
-  width: 10px;
-  height: 10px;
-  border-bottom: 1px solid #ffffff;
-  margin: 10px 10px 20px 10px;
-  padding: 7px;
-  display: inline;
+.word {
+  font-size: 26px;
+  letter-spacing: 20px;
 }
 
 .space {
@@ -197,7 +198,5 @@ main {
 }
 
 .word {
-  /*border: 1px solid blue;*/
-  /*display: flex;*/
 
 }
