@@ -1,0 +1,203 @@
+@font-face {
+    font-family: SP Marker;
+    src: url("SP-marker Font.otf") format("opentype");
+}
+
+body {
+background-color: #0a0800;
+background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+color: #ffffff;
+font-family: 'Raleway', sans-serif;
+font-weight: 400;
+margin: 0 auto;
+text-align: center;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+header {
+  background-color: rgba(30, 30, 30, 0.4);
+  margin: 0;
+}
+
+footer {
+  background-color: rgba(30, 30, 30, 0.4);
+  height: 400px;
+}
+
+h1 {
+  font-style: normal;
+  letter-spacing: 3px;
+  font-size: 38px;
+  margin: 0;
+  padding: 20px;
+  font-family: 'SP Marker', 'Raleway', sans-serif;
+}
+
+h2 {
+  font-family: 'SP Marker', 'Raleway', sans-serif;
+  padding-top: 10px;
+  letter-spacing: 2px;
+  font-size: 30px;
+}
+
+main {
+  padding: 0px;
+}
+
+.main-left {
+  float: left;
+  padding: 50px 0px 50px 20px;
+}
+
+.stand-top {
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  width: 200px;
+  height: 30px;
+  margin-left: 99px;
+}
+
+.stand-left, .man {
+  float: left;
+  width: 200px;
+}
+
+.pole {
+  height: 275px;
+  width: 3px;
+  background: white;
+  margin: 0 auto;
+}
+
+.stand-base {
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  width: 200px;
+  height: 50px;
+}
+
+.man {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  height: 350px;
+}
+
+.man > div {
+  /*position: absolute;*/
+}
+.torso {
+  width: 3px;
+  height: 120px;
+  background: white;
+  margin: 0 auto;
+}
+
+.head {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  left: 50%;
+  margin: 0 auto;
+}
+
+.arm {
+  width: 3px;
+  height: 75px;
+  background: white;
+}
+
+.left-arm {
+  transform: rotate(-55deg);
+  transform-origin: bottom;
+  position: absolute;
+  left: 49%;
+  top: 23%;
+}
+
+.right-arm {
+  transform: rotate(55deg);
+  transform-origin: bottom;
+  background: white;
+  position: absolute;
+  right: 49%;
+  top: 23%;
+}
+
+.leg {
+  width: 3px;
+  height: 75px;
+  background: white;
+}
+
+.left-leg {
+  transform: rotate(-135deg);
+  transform-origin: bottom;
+  position: absolute;
+  left: 49%;
+  top: 37%;
+}
+
+.right-leg {
+  transform: rotate(135deg);
+  transform-origin: bottom;
+  background: white;
+  position: absolute;
+  right: 49%;
+  top: 37%;
+}
+
+.main-right {
+  float: right;
+  width: 50%;
+  padding: 50px 20px 50px 0px;
+}
+
+.alph-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.alph {
+  margin: 7px;
+  padding: 8px;
+  font-size: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.alph:hover {
+  opacity: 0.5;
+}
+
+.letter {
+  width: 10px;
+  height: 10px;
+  border-bottom: 1px solid #ffffff;
+  margin: 10px 10px 20px 10px;
+  padding: 7px;
+  display: inline;
+}
+
+.space {
+  width: 10px;
+  height: 10px;
+  margin: 10px;
+  padding: 7px;
+  display: inline;
+}
+
+.word {
+  /*border: 1px solid blue;*/
+  /*display: flex;*/
+
+}
