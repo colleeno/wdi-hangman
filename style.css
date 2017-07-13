@@ -1,6 +1,6 @@
 @font-face {
     font-family: SP Marker;
-    src: url("../SP-Marker-Font.otf") format("opentype");
+    src: url("fonts/SP-Marker-Font.otf") format("opentype");
 }
 
 /********** BODY ELEMENTS LAYOUT **********/
@@ -8,7 +8,6 @@
 body {
 font-family: 'SP Marker', 'Raleway', arial, sans-serif;
 background-color: #0a0800;
-/*background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");*/
 background-image: url("images/black-felt.png");
 color: #ffffff;
 font-weight: 400;
