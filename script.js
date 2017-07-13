@@ -57,7 +57,7 @@ function startGame () {
   var showRight
   var displayWord
   var getAnswer = $('#answer')
-  var endHideElem = $('h2, .word, ul, footer')
+  var endHideElem = $('h2, .word, ul, footer, h1')
 
   alph.on('click', alphSelect)
   alph.on('click', alphUsed)

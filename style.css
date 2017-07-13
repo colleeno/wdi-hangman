@@ -46,9 +46,8 @@ footer {
 }
 
 h1 {
-  font-style: normal;
+  font-size: 40px;
   letter-spacing: 3px;
-  font-size: 38px;
   margin: 0;
   padding: 20px;
 }
@@ -56,12 +55,13 @@ h1 {
 h2 {
   padding-top: 10px;
   letter-spacing: 2px;
-  font-size: 30px;
+  font-size: 26px;
 }
 
 ul {
   margin: 0 auto;
   padding: 0;
+  letter-spacing: 2px;
 }
 
 li {
@@ -73,15 +73,6 @@ li {
   opacity: 0.7;
   cursor: pointer;
 }
-
-/*main {
-  padding: 0px;
-}
-
-.main-left {
-  float: left;
-  padding: 50px 0px 25px 20px;
-}*/
 
 .stand-top {
   border-top: 6px solid white;
@@ -237,7 +228,7 @@ li {
 
 #result, #play-again, #answer {
   font-size: 30px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   margin: 30px auto 0 auto;
 }
 
