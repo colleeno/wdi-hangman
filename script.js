@@ -6,31 +6,16 @@ var booksList = ['crime and punishment', 'the bible', 'the great gatsby']
 var cat = $('.cat')
 var catList
 var wordPlay = ' '
-var wordArray
-var alph = $('.alph')
-var alphPick
-var alphList = []
-var rightPicks = []
-var wrongPicks = []
-var showRight
-var displayWord
+var wordArray = null
 var wordCanvas = $('.word')
-var getAnswer = $('#answer')
-var endHideElem = $('h2, .word, ul, footer')
 
 cat.on('click', setWord)
 cat.on('click', setPlaceholder)
-alph.on('click', alphSelect)
-alph.on('click', alphUsed)
-alph.on('click', addToList)
-alph.on('click', checkPick)
-alph.on('click', reveal)
-alph.on('click', showMan)
-getAnswer.on('click', showAnswer)
-getAnswer.on('click', function () { getAnswer.css({'opacity': '0', 'cursor': 'default'}) })
+cat.on('click', startGame)
 
 /*set word*/
 function setWord () {
+  wordCanvas.html(' ')
   cat.css('text-decoration', 'none')
   $(this).css('text-decoration', 'underline')
   catList = $(this).attr('id')
@@ -42,6 +27,7 @@ function setWord () {
     wordPlay = booksList[Math.floor(Math.random() * booksList.length)]
   }
 }
+
 /*set placeholder*/
 function setPlaceholder () {
   wordArray = wordPlay.split('')
@@ -53,10 +39,32 @@ function setPlaceholder () {
   }
 }
 
+function startGame () {
+
+var alph = $('.alph')
+var alphPick
+var allPicks = []
+var rightPicks = []
+var wrongPicks = []
+var showRight
+var displayWord
+var getAnswer = $('#answer')
+var endHideElem = $('h2, .word, ul, footer')
+
+alph.on('click', alphSelect)
+alph.on('click', alphUsed)
+alph.on('click', addToList)
+alph.on('click', checkPick)
+alph.on('click', reveal)
+alph.on('click', showMan)
+getAnswer.on('click', showAnswer)
+getAnswer.on('click', function () { getAnswer.css({'opacity': '0', 'cursor': 'default'}) })
+
 /* mark and store letters selected */
 function alphUsed () { $(this).css({'opacity': '0.2', 'cursor': 'auto'}) }
 function alphSelect () { alphPick = $(this).attr('id') }
-function addToList () { alphList.push(alphPick) }
+function addToList () { allPicks.push(alphPick) }
+
 /* check if pick is right or wrong and track in array */
 function checkPick () {
   if (wordArray.includes(alphPick)) {
@@ -70,7 +78,7 @@ function checkPick () {
 /* reveal right letters on board */
 function reveal () {
   showRight = wordArray.map((letter) => {
-    if (alphList.includes(letter)) {
+    if (allPicks.includes(letter)) {
       return letter
     } else if (letter === ' ') {
       return ' '
@@ -78,6 +86,7 @@ function reveal () {
   })
   displayWord = showRight.join('')
   wordCanvas.text(displayWord)
+
 /* display win when all letters guessed */
   if (displayWord === wordPlay) {
     console.log('won')
@@ -110,25 +119,14 @@ function showMan () {
     $('#play-again').text('play again')
   }
 }
+
 /* if lose, show answer */
 function showAnswer () {
   wordCanvas.text(wordPlay)
 }
-
+}
+/* play again */
 $('#play-again').on('click', replay)
 function replay () {
-  // cat = $('.cat')
-  // catList
-  // wordPlay = moviesList[Math.floor(Math.random() * moviesList.length)]
-  // wordArray
-  // alph = $('.alph')
-  // alphPick
-  // alphList = []
-  // rightPicks = []
-  // wrongPicks = []
-  // showRight
-  // displayWord
-  // wordCanvas = $('.word')
-  // getAnswer = $('#answer')
   location.reload()
 }
