@@ -26,6 +26,19 @@ header {
   margin: 0;
 }
 
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-left {
+  padding: 50px 0px 25px 20px;
+}
+
+.main-right {
+  padding: 50px 20px 25px 0px;
+}
+
 footer {
   background-color: rgba(30, 30, 30, 0.4);
   padding: 50px 20px;
@@ -61,14 +74,14 @@ li {
   cursor: pointer;
 }
 
-main {
+/*main {
   padding: 0px;
 }
 
 .main-left {
   float: left;
   padding: 50px 0px 25px 20px;
-}
+}*/
 
 .stand-top {
   border-top: 6px solid white;
@@ -186,11 +199,11 @@ main {
   transform: rotate(135deg);
 }
 
-.main-right {
+/*.main-right {
   float: right;
   width: 50%;
   padding: 50px 20px 25px 0px;
-}
+}*/
 
 .alph-wrapper {
   display: flex;
@@ -208,6 +221,7 @@ main {
   border: 1px solid white;
   border-radius: 5px;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .alph:hover {
@@ -236,4 +250,21 @@ main {
 #play-again:hover, #answer:hover {
   opacity: 0.8;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    flex-direction: column;
+  }
+  .main-right {
+    order: -1;
+  }
+
+  .stand-left {
+    width: 100px;
+  }
+  .stand-top {
+    width: 145px;
+    margin-left: 47px;
+  }
 }

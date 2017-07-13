@@ -1,7 +1,16 @@
 /* global $ */
+var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+function createAlph () {
+  for (var i = 0; i < alphabet.length; i++) {
+    $('<div></div>').attr({'class': 'alph', 'id': alphabet[i]}).text(alphabet[i]).appendTo('.alph-wrapper')
+  }
+}
+createAlph()
+
 var moviesList = ['the sound of music', 'braveheart', 'jaws', 'titanic', 'casablanca', 'the wizard of oz']
-var songsList = ['vogue', 'thriller', 'uptown funk', 'my heart will go on']
-var booksList = ['crime and punishment', 'the bible', 'the great gatsby']
+var songsList = ['vogue', 'thriller', 'i will always love you', 'we will rock you', 'i believe i can fly']
+var booksList = ['crime and punishment', 'the catcher in the rye', 'the great gatsby', 'the davinci code', 'war and peace']
 
 var cat = $('.cat')
 var catList
@@ -40,7 +49,6 @@ function setPlaceholder () {
 }
 
 function startGame () {
-
   var alph = $('.alph')
   var alphPick
   var allPicks = []
@@ -129,4 +137,7 @@ function startGame () {
 $('#play-again').on('click', replay)
 function replay () {
   location.reload()
+  // setWord()
+  // setPlaceholder()
+  // startGame()
 }
