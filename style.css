@@ -4,10 +4,10 @@
 }
 
 body {
+font-family: 'SP Marker', 'Raleway', arial, sans-serif;
 background-color: #0a0800;
 background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
 color: #ffffff;
-font-family: arial, sans-serif;
 font-weight: 400;
 margin: 0 auto;
 text-align: center;
@@ -29,6 +29,7 @@ header {
 footer {
   background-color: rgba(30, 30, 30, 0.4);
   padding: 50px 20px;
+  font-family: arial, sans-serif;
 }
 
 h1 {
@@ -37,11 +38,9 @@ h1 {
   font-size: 38px;
   margin: 0;
   padding: 20px;
-  font-family: 'SP Marker', 'Raleway', sans-serif;
 }
 
 h2 {
-  font-family: 'SP Marker', 'Raleway', sans-serif;
   padding-top: 10px;
   letter-spacing: 2px;
   font-size: 30px;
@@ -54,7 +53,6 @@ ul {
 
 li {
   display: inline;
-  font-family: 'SP Marker', 'Raleway', sans-serif;
   font-size: 26px;
 }
 
@@ -99,7 +97,6 @@ main {
   border-right: 6px solid white;
   width: 200px;
   height: 50px;
-  font-family: 'SP Marker', 'Raleway', sans-serif;
   font-size: 24px;
   letter-spacing: 5px;
   padding-top: 10px;
@@ -128,6 +125,7 @@ main {
 .eyes, .frown {
   font-weight: bold;
   opacity: 0;
+  font-family: arial, sans-serif;
 }
 
 .eyes {
@@ -221,14 +219,12 @@ main {
   letter-spacing: 10px;
   width: 400px;
   margin: 30px auto 0 auto;
-  font-family: 'SP Marker', 'Raleway', sans-serif;
 }
 
 #result, #play-again, #answer {
   font-size: 30px;
   letter-spacing: 3px;
   margin: 30px auto 0 auto;
-  font-family: 'SP Marker', 'Raleway', sans-serif;
 }
 
 #play-again, #answer {
@@ -239,4 +235,5 @@ main {
 
 #play-again:hover, #answer:hover {
   opacity: 0.8;
+  text-decoration: underline;
 }

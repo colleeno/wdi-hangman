@@ -6,7 +6,6 @@ var booksList = ['crime and punishment', 'the bible', 'the great gatsby']
 var cat = $('.cat')
 var catList
 var wordPlay = ' '
-// var wordPlay = moviesList[Math.floor(Math.random() * moviesList.length)]
 var wordArray
 var alph = $('.alph')
 var alphPick
@@ -30,7 +29,7 @@ alph.on('click', checkPick)
 alph.on('click', reveal)
 alph.on('click', showMan)
 getAnswer.on('click', showAnswer)
-getAnswer.on('click', function () {getAnswer.css({'opacity': '0', 'cursor': 'default'})})
+getAnswer.on('click', function () { getAnswer.css({'opacity': '0', 'cursor': 'default'}) })
 
 /* reset start word based on cat */
 function resetWord () {
