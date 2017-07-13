@@ -8,7 +8,8 @@
 body {
 font-family: 'SP Marker', 'Raleway', arial, sans-serif;
 background-color: #0a0800;
-background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+/*background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");*/
+background-image: url("images/black-felt.png");
 color: #ffffff;
 font-weight: 400;
 margin: 0 auto;
