@@ -18,9 +18,7 @@ var wordCanvas = $('.word')
 var getAnswer = $('#answer')
 var endHideElem = $('h2, .word, ul, footer')
 
-cat.on('click', setPlaceholder)
-cat.on('click', resetPlaceholder)
-cat.on('click', resetWord)
+cat.on('click', setWord)
 cat.on('click', setPlaceholder)
 alph.on('click', alphSelect)
 alph.on('click', alphUsed)
@@ -31,8 +29,8 @@ alph.on('click', showMan)
 getAnswer.on('click', showAnswer)
 getAnswer.on('click', function () { getAnswer.css({'opacity': '0', 'cursor': 'default'}) })
 
-/* reset start word based on cat */
-function resetWord () {
+/*set word*/
+function setWord () {
   cat.css('text-decoration', 'none')
   $(this).css('text-decoration', 'underline')
   catList = $(this).attr('id')
@@ -44,25 +42,15 @@ function resetWord () {
     wordPlay = booksList[Math.floor(Math.random() * booksList.length)]
   }
 }
-
-/* create placeholder underscores */
-function wordDivs (wordArray) {
+/*set placeholder*/
+function setPlaceholder () {
+  wordArray = wordPlay.split('')
+  wordCanvas.html('')
   for (let i = 0; i < wordArray.length; i++) {
     if (wordArray[i] === ' ') {
       $('.word').append(' ')
     } else $('.word').append('_')
   }
-}
-// setPlaceholder()
-
-/* set initial placeholder underscores */
-function setPlaceholder () {
-  wordArray = wordPlay.split('')
-  wordArray.forEach(wordDivs)
-}
-/* reset placeholder board */
-function resetPlaceholder () {
-  wordCanvas.html('')
 }
 
 /* mark and store letters selected */
