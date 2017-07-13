@@ -3,6 +3,8 @@
     src: url("SP-marker Font.otf") format("opentype");
 }
 
+/********** BODY ELEMENTS LAYOUT **********/
+
 body {
 font-family: 'SP Marker', 'Raleway', arial, sans-serif;
 background-color: #0a0800;
@@ -15,10 +17,6 @@ min-height: 100vh;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-}
-
-button {
-  display: none;
 }
 
 header {
@@ -45,6 +43,8 @@ footer {
   font-family: arial, sans-serif;
 }
 
+/********** TEXT AREA STYLES **********/
+
 h1 {
   font-size: 40px;
   letter-spacing: 3px;
@@ -69,10 +69,61 @@ li {
   font-size: 26px;
 }
 
+.word {
+  font-size: 30px;
+  letter-spacing: 10px;
+  width: 400px;
+  margin: 30px auto 0 auto;
+}
+
+.alph-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.alph {
+  margin: 7px;
+  padding: 8px;
+  font-size: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+#result, #play-again, #answer {
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin: 30px auto 0 auto;
+}
+
+#play-again, #answer {
+  cursor: pointer;
+  font-size: 26px;
+  margin-top: 20px;
+}
+
+/********** MOUSE HOVER STYLES **********/
+
 .cat:hover {
   opacity: 0.7;
   cursor: pointer;
 }
+
+#play-again:hover, #answer:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.alph:hover {
+  opacity: 0.5;
+}
+
+/********** HANGMAN STYLES **********/
 
 .stand-top {
   border-top: 6px solid white;
@@ -190,58 +241,7 @@ li {
   transform: rotate(135deg);
 }
 
-/*.main-right {
-  float: right;
-  width: 50%;
-  padding: 50px 20px 25px 0px;
-}*/
-
-.alph-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
-}
-
-.alph {
-  margin: 7px;
-  padding: 8px;
-  font-size: 20px;
-  border: 1px solid white;
-  border-radius: 5px;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-.alph:hover {
-  opacity: 0.5;
-}
-
-.word {
-  font-size: 30px;
-  letter-spacing: 10px;
-  width: 400px;
-  margin: 30px auto 0 auto;
-}
-
-#result, #play-again, #answer {
-  font-size: 30px;
-  letter-spacing: 2px;
-  margin: 30px auto 0 auto;
-}
-
-#play-again, #answer {
-  cursor: pointer;
-  font-size: 26px;
-  margin-top: 20px;
-}
-
-#play-again:hover, #answer:hover {
-  opacity: 0.8;
-  text-decoration: underline;
-}
+/********** MOBILE STYLES **********/
 
 @media screen and (max-width: 600px) {
   main {

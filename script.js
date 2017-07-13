@@ -1,4 +1,6 @@
 /* global $ */
+
+/* CREATE KEYBOARD */
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 function createAlph () {
@@ -22,7 +24,7 @@ cat.on('click', setWord)
 cat.on('click', setPlaceholder)
 cat.on('click', startGame)
 
-/*set word*/
+/* SET WORD BASED OFF CATEGORY CHOSEN */
 function setWord () {
   wordCanvas.html(' ')
   cat.css('text-decoration', 'none')
@@ -37,7 +39,7 @@ function setWord () {
   }
 }
 
-/*set placeholder*/
+/* SET LINES FOR WORD LETTERS */
 function setPlaceholder () {
   wordArray = wordPlay.split('')
   wordCanvas.html('')
@@ -48,6 +50,7 @@ function setPlaceholder () {
   }
 }
 
+/* GAME FUNCTION */
 function startGame () {
   var alph = $('.alph')
   var alphPick
@@ -58,6 +61,8 @@ function startGame () {
   var displayWord
   var getAnswer = $('#answer')
   var endHideElem = $('h2, .word, ul, footer, h1')
+  var result = $('#result')
+  var playAgain = $('#play-again')
 
   alph.on('click', alphSelect)
   alph.on('click', alphUsed)
@@ -65,15 +70,16 @@ function startGame () {
   alph.on('click', checkPick)
   alph.on('click', reveal)
   alph.on('click', showMan)
+
   getAnswer.on('click', showAnswer)
   getAnswer.on('click', function () { getAnswer.css({'opacity': '0', 'cursor': 'default'}) })
 
-  /* mark and store letters selected */
+  /* STORE GUESSES AND MARK USED */
   function alphUsed () { $(this).css({'opacity': '0.2', 'cursor': 'auto'}) }
   function alphSelect () { alphPick = $(this).attr('id') }
   function addToList () { allPicks.push(alphPick) }
 
-  /* check if pick is right or wrong and track in array */
+  /* CHECK AND STORE IF LETTER IS RIGHT OR WRONG  */
   function checkPick () {
     if (wordArray.includes(alphPick)) {
       rightPicks.push(alphPick)
@@ -83,7 +89,7 @@ function startGame () {
     }
   }
 
-  /* reveal right letters on board */
+  /* SHOW RIGHT LETTERS ON BOARD */
   function reveal () {
     showRight = wordArray.map((letter) => {
       if (allPicks.includes(letter)) {
@@ -95,17 +101,16 @@ function startGame () {
     displayWord = showRight.join('')
     wordCanvas.text(displayWord)
 
-  /* display win when all letters guessed */
+  /* SHOW WIN WHEN ALL LETTERS GUESSED */
     if (displayWord === wordPlay) {
-      console.log('won')
       endHideElem.css('opacity', '0.5')
       $('aside').css('opacity', '0.5')
-      $('#result').text('YOU WIN!')
-      $('#play-again').text('play again')
+      result.text('YOU WIN!')
+      playAgain.text('play again')
     }
   }
 
-  /* wrong answers to reveal hangman */
+  /* BUILD HANGMAN WITH WRONG PICKS */
   function showMan () {
     if (wrongPicks.length === 1) {
       $('.head').removeClass('hidden')
@@ -120,24 +125,20 @@ function startGame () {
     } else if (wrongPicks.length === 6) {
       $('.right-leg').removeClass('hidden')
       getAnswer.text('get answer')
-      $('#result').text('YOU LOSE')
+      result.text('YOU LOSE')
       endHideElem.css('opacity', '0.5')
-      $('.eyes').animate({'opacity': '1'}, {'duration': 900})
-      $('.frown').animate({'opacity': '1'}, {'duration': 900})
-      $('#play-again').text('play again')
+      $('.eyes, .frown').animate({'opacity': '1'}, {'duration': 900})
+      playAgain.text('play again')
     }
   }
 
-  /* if lose, show answer */
+  /* PROVIDE SHOW ANSWER OPTION ON LOSE */
   function showAnswer () {
     wordCanvas.text(wordPlay)
   }
 }
-/* play again */
+/* PLAY GAME AGAIN */
 $('#play-again').on('click', replay)
 function replay () {
   location.reload()
-  // setWord()
-  // setPlaceholder()
-  // startGame()
 }
