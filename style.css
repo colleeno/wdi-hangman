@@ -28,7 +28,7 @@ header {
 
 footer {
   background-color: rgba(30, 30, 30, 0.4);
-  height: 400px;
+  padding: 50px 20px;
 }
 
 h1 {
@@ -56,6 +56,11 @@ li {
   display: inline;
   font-family: 'SP Marker', 'Raleway', sans-serif;
   font-size: 26px;
+}
+
+.cat:hover {
+  opacity: 0.9;
+  cursor: pointer;
 }
 
 main {
@@ -107,15 +112,6 @@ main {
   height: 350px;
 }
 
-.torso, .arm, .leg {
-  width: 6px;
-  background: white;
-}
-
-.arm, .leg {
-  height: 75px;
-}
-
 .hidden {
   display: none;
 }
@@ -128,6 +124,7 @@ main {
   left: 50%;
   margin: 0 auto;
 }
+
 .eyes, .frown {
   font-weight: bold;
   opacity: 0;
@@ -152,36 +149,43 @@ main {
   margin: 0 auto;
 }
 
-.left-arm {
-  transform: rotate(-55deg);
-  transform-origin: bottom;
-  position: absolute;
+.torso, .arm, .leg {
+  width: 6px;
+  background: white;
+}
+
+.arm, .leg {
+  height: 75px;
+}
+
+.arm {
   left: 49%;
   top: 18%;
+  transform-origin: bottom;
+  position: absolute;
+}
+
+.left-arm {
+  transform: rotate(-55deg);
 }
 
 .right-arm {
   transform: rotate(55deg);
+}
+
+.leg {
   transform-origin: bottom;
   position: absolute;
-  right: 49%;
-  top: 18%;
+  left: 49%;
+  top: 31%;
 }
 
 .left-leg {
   transform: rotate(-135deg);
-  transform-origin: bottom;
-  position: absolute;
-  left: 49%;
-  top: 30%;
 }
 
 .right-leg {
   transform: rotate(135deg);
-  transform-origin: bottom;
-  position: absolute;
-  right: 49%;
-  top: 30%;
 }
 
 .main-right {
@@ -194,7 +198,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   width: 80%;
-  padding-top: 50px;
   margin: 0 auto;
   align-items: center;
   justify-content: center;
@@ -232,4 +235,8 @@ main {
   cursor: pointer;
   font-size: 26px;
   margin-top: 20px;
+}
+
+#play-again:hover, #answer:hover {
+  opacity: 0.8;
 }
