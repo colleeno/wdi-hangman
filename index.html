@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Hangman</title>
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" id="reset-styles">
   </head>
   <body>
     <header>
@@ -21,9 +21,13 @@
           </div>
         </div>
         <div class="man">
-          <div class="head center hidden">
+          <div class="head hidden">
           </div>
-          <div class="torso center hidden">
+          <div class="eyes">&bull; &nbsp; &bull;
+          </div>
+          <div class="frown">(
+          </div>
+          <div class="torso hidden">
           </div>
             <div class="arm left-arm hidden">
             </div>
@@ -38,13 +42,17 @@
       <section class="main-right">
         <h2>Categories</h2>
         <ul>
-          <li class="cat" id="movies">Movies | </li>
-          <li class="cat" id="songs">Songs | </li>
+          <li class="cat" id="movies">Movies</li>
+          <li> | </li>
+          <li class="cat" id="songs">Songs</li>
+          <li> | </li>
           <li class="cat" id="books">Books</li>
         </ul>
         <div class="word">
         </div>
-        <div id="answer">get answer</div>
+        <div id="result"></div>
+        <div id="play-again"></div>
+        <div id="answer"></div>
       </section>
     </main>
     <footer>

@@ -17,6 +17,10 @@ flex-direction: column;
 justify-content: space-between;
 }
 
+button {
+  display: none;
+}
+
 header {
   background-color: rgba(30, 30, 30, 0.4);
   margin: 0;
@@ -50,6 +54,8 @@ ul {
 
 li {
   display: inline;
+  font-family: 'SP Marker', 'Raleway', sans-serif;
+  font-size: 26px;
 }
 
 main {
@@ -88,6 +94,10 @@ main {
   border-right: 3px solid white;
   width: 200px;
   height: 50px;
+  font-family: 'SP Marker', 'Raleway', sans-serif;
+  font-size: 24px;
+  letter-spacing: 5px;
+  padding-top: 10px;
 }
 
 .man {
@@ -95,10 +105,6 @@ main {
   width: 200px;
   margin: 0 auto;
   height: 350px;
-}
-
-.man > div {
-  /*position: absolute;*/
 }
 
 .hidden {
@@ -112,6 +118,22 @@ main {
   border: 3px solid #ffffff;
   left: 50%;
   margin: 0 auto;
+}
+
+.eyes {
+  position: absolute;
+  top: 6%;
+  left: 45%;
+  opacity: 0;
+}
+
+.frown {
+  transform: rotate(90deg);
+  position: absolute;
+  top: 11%;
+  left: 50%;
+  opacity: 0;
+  font-size: 24px;
 }
 
 .torso {
@@ -204,14 +226,14 @@ main {
   font-family: 'SP Marker', 'Raleway', sans-serif;
 }
 
-#answer {
+#result, #play-again, #answer {
+  font-size: 30px;
+  letter-spacing: 3px;
+  margin: 30px auto 0 auto;
+  font-family: 'SP Marker', 'Raleway', sans-serif;
+}
+
+#play-again, #answer {
   cursor: pointer;
-  padding: 15px;
-  font-size: 20px;
-  border: 3px solid white;
-  border-radius: 4px;
-  width: 150px;
-  margin: 50px auto;
-  opacity: 0;
-  font-family: arial;
+  font-size: 26px;
 }
