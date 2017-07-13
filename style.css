@@ -68,12 +68,12 @@ main {
 }
 
 .stand-top {
-  border-top: 3px solid white;
-  border-left: 3px solid white;
-  border-right: 3px solid white;
-  width: 200px;
+  border-top: 6px solid white;
+  border-left: 6px solid white;
+  border-right: 6px solid white;
+  width: 196px;
   height: 30px;
-  margin-left: 99px;
+  margin-left: 97px;
 }
 
 .stand-left, .man {
@@ -83,15 +83,15 @@ main {
 
 .pole {
   height: 275px;
-  width: 3px;
+  width: 6px;
   background: white;
   margin: 0 auto;
 }
 
 .stand-base {
-  border-top: 3px solid white;
-  border-left: 3px solid white;
-  border-right: 3px solid white;
+  border-top: 6px solid white;
+  border-left: 6px solid white;
+  border-right: 6px solid white;
   width: 200px;
   height: 50px;
   font-family: 'SP Marker', 'Raleway', sans-serif;
@@ -107,6 +107,15 @@ main {
   height: 350px;
 }
 
+.torso, .arm, .leg {
+  width: 6px;
+  background: white;
+}
+
+.arm, .leg {
+  height: 75px;
+}
+
 .hidden {
   display: none;
 }
@@ -115,16 +124,19 @@ main {
   width: 75px;
   height: 75px;
   border-radius: 50%;
-  border: 3px solid #ffffff;
+  border: 6px solid #ffffff;
   left: 50%;
   margin: 0 auto;
+}
+.eyes, .frown {
+  font-weight: bold;
+  opacity: 0;
 }
 
 .eyes {
   position: absolute;
   top: 6%;
   left: 45%;
-  opacity: 0;
 }
 
 .frown {
@@ -132,21 +144,12 @@ main {
   position: absolute;
   top: 11%;
   left: 50%;
-  opacity: 0;
   font-size: 24px;
 }
 
 .torso {
-  width: 3px;
   height: 100px;
-  background: white;
   margin: 0 auto;
-}
-
-.arm {
-  width: 3px;
-  height: 75px;
-  background: white;
 }
 
 .left-arm {
@@ -160,16 +163,9 @@ main {
 .right-arm {
   transform: rotate(55deg);
   transform-origin: bottom;
-  background: white;
   position: absolute;
   right: 49%;
   top: 18%;
-}
-
-.leg {
-  width: 3px;
-  height: 75px;
-  background: white;
 }
 
 .left-leg {
@@ -183,7 +179,6 @@ main {
 .right-leg {
   transform: rotate(135deg);
   transform-origin: bottom;
-  background: white;
   position: absolute;
   right: 49%;
   top: 30%;
@@ -236,4 +231,5 @@ main {
 #play-again, #answer {
   cursor: pointer;
   font-size: 26px;
+  margin-top: 20px;
 }
