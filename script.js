@@ -135,6 +135,7 @@ function startGame () {
   /* PROVIDE SHOW ANSWER OPTION ON LOSE */
   function showAnswer () {
     wordCanvas.text(wordPlay)
+    $('.word').css('opacity', '1')
   }
 }
 /* PLAY GAME AGAIN */
