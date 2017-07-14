@@ -20,9 +20,9 @@ var wordPlay = ' '
 var wordArray = null
 var wordCanvas = $('.word')
 
+cat.on('click', startGame)
 cat.on('click', setWord)
 cat.on('click', setPlaceholder)
-cat.on('click', startGame)
 
 /* SET WORD BASED OFF CATEGORY CHOSEN */
 function setWord () {
@@ -81,11 +81,12 @@ function startGame () {
 
   /* CHECK AND STORE IF LETTER IS RIGHT OR WRONG  */
   function checkPick () {
+    console.log(wordArray)
     if (wordArray.includes(alphPick)) {
       rightPicks.push(alphPick)
     } else {
       wrongPicks.push(alphPick)
-      $('.stand-base').append(alphPick)
+      $('.stand-base').text(wrongPicks.join(''))
     }
   }
 
