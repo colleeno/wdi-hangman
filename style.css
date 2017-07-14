@@ -66,7 +66,7 @@ ul {
 
 li {
   display: inline;
-  font-size: 26px;
+  font-size: 28px;
 }
 
 .word {
@@ -250,12 +250,78 @@ li {
   .main-right {
     order: -1;
   }
+  h1 {
+    font-size: 24px;
+  }
+  h2, li, .alph, #result, #play-again, #answer {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  #answer {
+    padding-bottom: 10px;
+  }
+  .word {
+    font-size: 20px;
+    width: 100%;
+    margin: 10px auto 0 auto;
+  }
+  .main-left, .main-right {
+    padding: 0 10px;
+  }
 
+  .main-left {
+    margin: 0 auto;
+  }
   .stand-left {
     width: 100px;
   }
   .stand-top {
+    height: 10px;
+  }
+  .pole {
+    height: 140px;
+  }
+  .stand-base {
+    width: 150px;
+    font-size: 18px;
+  }
+  .man {
+    height: 100px;
+  }
+  .torso {
+    height: 50px;
+  }
+  .arm, .leg {
+    height: 35px;
+  }
+  .arm {
+    top: 40%;
+  }
+  .leg {
+    top: 64%
+  }
+
+  .head {
+    width: 40px;
+    height: 40px;
+  }
+  .eyes {
+    top: 8%;
+    left: 45%;
+    letter-spacing: -1px;
+  }
+  .frown {
+    top: 15%;
+    left: 49%;
+  }
+  .stand-top {
     width: 145px;
     margin-left: 47px;
+  }
+  footer {
+    padding: 10px;
+  }
+  .alph-wrapper {
+    width: 100%;
   }
 }
