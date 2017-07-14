@@ -81,7 +81,6 @@ function startGame () {
 
   /* CHECK AND STORE IF LETTER IS RIGHT OR WRONG  */
   function checkPick () {
-    console.log(wordArray)
     if (wordArray.includes(alphPick)) {
       rightPicks.push(alphPick)
     } else {
