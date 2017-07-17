@@ -60,7 +60,7 @@ function startGame () {
   var showRight
   var displayWord
   var getAnswer = $('#answer')
-  var endHideElem = $('h2, .word, ul, footer, h1')
+  var endHideElem = $('h2, .word, ul, footer, h1, aside, .word')
   var result = $('#result')
   var playAgain = $('#play-again')
 
@@ -104,7 +104,6 @@ function startGame () {
   /* SHOW WIN WHEN ALL LETTERS GUESSED */
     if (displayWord === wordPlay) {
       endHideElem.css('opacity', '0.5')
-      $('aside').css('opacity', '0.5')
       result.text('YOU WIN!')
       playAgain.text('play again')
     }
@@ -126,7 +125,7 @@ function startGame () {
       $('.right-leg').removeClass('hidden')
       getAnswer.text('get answer')
       result.text('YOU LOSE')
-      endHideElem.css('opacity', '0.5')
+      endHideElem.css('opacity', '0.3')
       $('.eyes, .frown').animate({'opacity': '1'}, {'duration': 900})
       playAgain.text('play again')
     }
