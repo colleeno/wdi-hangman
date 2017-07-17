@@ -264,13 +264,18 @@ li {
     font-size: 18px;
     margin-top: 10px;
   }
+
+  .end-messages {
+    left: 37%;
+  }
+
   #answer {
     padding-bottom: 10px;
   }
   .word {
     font-size: 20px;
     width: 100%;
-    margin: 10px auto 0 auto;
+    margin: 10px auto 20px auto;
   }
   .main-left, .main-right {
     padding: 0 10px;
